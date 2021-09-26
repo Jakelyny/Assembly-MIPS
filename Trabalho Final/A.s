@@ -34,24 +34,24 @@ END_TESTE:
 
 
 EXISTE:
-		li $v0, 4      
-		la $a0, msg2    
-		syscall
+        li $v0, 4      
+        la $a0, msg2    
+        syscall
 
-		li $v0, 1    
-		move $a0, $t1   
-		syscall       
+        li $v0, 1    
+        move $a0, $t1   
+        syscall       
 
-		li $v0, 4       
-		la $a0, msg1   
-		syscall        
+        li $v0, 4       
+        la $a0, msg1   
+        syscall        
 
-		li $v0, 5      
-		syscall         
-		move $t1, $v0	
+        li $v0, 5      
+        syscall         
+        move $t1, $v0	
 
-		sw $t1, vetin($t0)
-		j TESTE_LOOP
+        sw $t1, vetin($t0)
+        j TESTE_LOOP
 
 END_WRITE:
         li $t0, 0 
