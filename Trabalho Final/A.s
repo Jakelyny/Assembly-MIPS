@@ -1,9 +1,9 @@
     .data
 vetin: .word 12,14,2,7,5,0,10,19,34,52,26,12,53,78,56,32,33,45,44,18
 vet: .space 20*4		
-spc:   .asciiz ", "
-msg1:   .asciiz "\nInsira um numero: " 
-msg2:   .asciiz "\nOPS, O NUMERO JÁ EXISTE! ! !\n" 
+spc: .asciiz ", "
+msg1: .asciiz "\nInsira um numero: " 
+msg2: .asciiz "\nOPS, O NUMERO JÁ EXISTE! ! !" 
     .text
 
     .globl main
@@ -24,7 +24,7 @@ TESTE_LOOP:
         bge $t5, $t0, END_TESTE
         lw $t8, vet($t5)
 
-        beq $t1, $t8, EXISTE
+        beq $t1, $t8, IGUAL
         addi $t5, $t5, 4	
 
 END_TESTE:
@@ -32,8 +32,7 @@ END_TESTE:
         addi $t0, $t0, 4	
         j WRITE_LOOP
 
-
-EXISTE:
+IGUAL:
         li $v0, 4      
         la $a0, msg2    
         syscall
