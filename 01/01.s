@@ -3,7 +3,6 @@ msg1: .asciiz "\nInsira o primeiro numero: "
 msg2: .asciiz "\nInsira o segundo numero: "
 msg3: .asciiz "\nInsira o terceiro numero: "
 msg4: .asciiz "\nSoma: "
-
 	.text
 
 	.globl main
